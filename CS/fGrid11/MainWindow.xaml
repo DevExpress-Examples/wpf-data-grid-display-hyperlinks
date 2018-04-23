@@ -1,0 +1,30 @@
+﻿<Window x:Class="fGrid11.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:fGrid11"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    Title="DXApplication" Height="700" Width="1100"
+    SnapsToDevicePixels="True">
+    <Grid>
+        <dxg:GridControl Name="gridControl1" DataSource="{Binding ListPerson}" >
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn FieldName="FirstName"/>
+                <dxg:GridColumn FieldName="LastName"/>
+                <dxg:GridColumn FieldName="Age"/>
+                <dxg:GridColumn FieldName="Group" Width="200">
+                    <dxg:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                        <Hyperlink NavigateUri="{Binding Data.Hyperlink}" TargetName="_blank" RequestNavigate="OnHyperlinkRequestNavigate">
+                            <TextBlock Text="{Binding Data.Hyperlink}" />
+                        </Hyperlink>
+                    </TextBlock>
+                        </DataTemplate>
+                    </dxg:GridColumn.CellTemplate>
+                </dxg:GridColumn>
+            </dxg:GridControl.Columns>
+        </dxg:GridControl>
+    </Grid>
+</Window>
