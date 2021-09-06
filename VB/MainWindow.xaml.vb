@@ -17,11 +17,11 @@ Imports System.Windows.Shapes
 
 
 Namespace fGrid11
-    Partial Public Class MainWindow
-        Inherits DXWindow
+	Partial Public Class MainWindow
+		Inherits DXWindow
 
-        Public Sub New()
-            InitializeComponent()
-        End Sub
-    End Class
+		Public Sub New()
+			InitializeComponent()
+		End Sub
+	End Class
 End Namespace
