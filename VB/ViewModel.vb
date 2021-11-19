@@ -1,15 +1,15 @@
-﻿Imports System
-Imports System.Collections.Generic
 Imports System.Collections.ObjectModel
-Imports System.Linq
-Imports System.Text
 
 Namespace fGrid11
+
     Public Class MyViewModel
+
         Public Sub New()
             CreateList()
         End Sub
-        Public Property Items() As ObservableCollection(Of Item)
+
+        Public Property Items As ObservableCollection(Of Item)
+
         Private Sub CreateList()
             Items = New ObservableCollection(Of Item)()
             Items.Add(New Item() With {.ID = 1, .Name = "HyperlinkEdit", .HelpLink = "https://documentation.devexpress.com/#WPF/CustomDocument117458"})
@@ -23,8 +23,11 @@ Namespace fGrid11
     End Class
 
     Public Class Item
-        Public Property ID() As Integer
-        Public Property Name() As String
-        Public Property HelpLink() As String
+
+        Public Property ID As Integer
+
+        Public Property Name As String
+
+        Public Property HelpLink As String
     End Class
 End Namespace
