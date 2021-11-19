@@ -9,8 +9,8 @@
                     <dxg:GridColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock>
-                        <Hyperlink NavigateUri="{Binding Data.Hyperlink}" TargetName="_blank" RequestNavigate="OnHyperlinkRequestNavigate">
-                            <TextBlock Text="{Binding Data.Hyperlink}" />
+                        <Hyperlink NavigateUri="{Binding RowData.Row.Hyperlink}" TargetName="_blank" RequestNavigate="OnHyperlinkRequestNavigate">
+                            <TextBlock Text="{Binding RowData.Row.Hyperlink}" />
                         </Hyperlink>
                     </TextBlock>
                         </DataTemplate>
