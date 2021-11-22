@@ -6,7 +6,7 @@
 
 # Data Grid for WPF - How to Display Hyperlinks in Cells
 
-This example demonstrates how to display hyperlinks in [GridControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl) cells. To do that, bind a column to the field that contains a hyperlink in data source. Define a [DataTemplate](https://docs.microsoft.com/en-us/dotnet/api/system.windows.datatemplate) and assign it to the [CellTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.ColumnBase.CellTemplate) property. The template should include the [HyperlinkEdit](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.HyperlinkEdit) editor. Use the [HyperlinkEdit.Text]() property to specify a custom caption instead of URL.
+This example demonstrates how to display hyperlinks in [GridControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl) cells. To do that, bind a column to the field that contains a hyperlink in the data source. Define a [DataTemplate](https://docs.microsoft.com/en-us/dotnet/api/system.windows.datatemplate) and assign it to the [CellTemplate](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.ColumnBase.CellTemplate) property. The template should include the [HyperlinkEdit](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.HyperlinkEdit) editor. Use the [HyperlinkEdit.Text]() property to specify a custom caption instead of a URL.
 
 ```xaml
 <dxg:GridColumn FieldName="HelpLink">
