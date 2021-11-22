@@ -20,7 +20,7 @@ This example demonstrates how to display hyperlinks in [GridControl](https://doc
 </dxg:GridColumn>
 ```
 
-![](/grid-hyperlinks-example.png)
+![](/hyperlinks-example.png)
 
 <!-- default file list -->
 
