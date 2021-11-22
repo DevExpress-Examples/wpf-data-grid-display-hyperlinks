@@ -1,11 +1,9 @@
-Imports DevExpress.Xpf.Core
-Imports System.Diagnostics
-Imports System.Windows.Controls
+Imports System.Windows
 
-Namespace fGrid11
+Namespace HyperlinkInGridCell
 
     Public Partial Class MainWindow
-        Inherits DXWindow
+        Inherits Window
 
         Public Sub New()
             Me.InitializeComponent()

@@ -5,11 +5,11 @@ Imports System.Windows
 ' General Information about an assembly is controlled through the following 
 ' set of attributes. Change these attribute values to modify the information
 ' associated with an assembly.
-<Assembly:AssemblyTitle("fGrid11")>
+<Assembly:AssemblyTitle("HyperlinkInGridCell")>
 <Assembly:AssemblyDescription("")>
 <Assembly:AssemblyConfiguration("")>
 <Assembly:AssemblyCompany("")>
-<Assembly:AssemblyProduct("fGrid11")>
+<Assembly:AssemblyProduct("HyperlinkInGridCell")>
 <Assembly:AssemblyCopyright("Copyright ©  2013")>
 <Assembly:AssemblyTrademark("")>
 <Assembly:AssemblyCulture("")>

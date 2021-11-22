@@ -1,10 +1,7 @@
 Imports System.Windows
 
-Namespace fGrid11
+Namespace HyperlinkInGridCell
 
-    ''' <summary>
-    ''' Interaction logic for App.xaml
-    ''' </summary>
     Public Partial Class App
         Inherits Application
 

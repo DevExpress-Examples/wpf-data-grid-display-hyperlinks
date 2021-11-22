@@ -1,33 +1,31 @@
-<dx:DXWindow x:Class="fGrid11.MainWindow" 
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-        xmlns:local="clr-namespace:fGrid11" 
-        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
-        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
-        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
-        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
-        Title="HyperlinkEdit Example" Height="400" Width="500"
-        DataContext="{dxmvvm:ViewModelSource Type=local:MyViewModel}">
+<Window x:Class="HyperlinkInGridCell.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:local="clr-namespace:HyperlinkInGridCell"
+        Title="HyperlinkEdit Example" Height="400" Width="500">
+
+    <Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>
+
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <dxe:HyperlinkEdit VerticalAlignment="Center" HorizontalAlignment="Center" EditValue="https://www.devexpress.com/" AllowAutoNavigate="True"/>
-        <dxg:GridControl Name="gridControl1" DataSource="{Binding Items}" Grid.Row="1">
-            <dxg:GridControl.Columns>
-                <dxg:GridColumn FieldName="ID" Width="80" />
-                <dxg:GridColumn FieldName="HelpLink">
-                    <dxg:GridColumn.CellTemplate>
-                        <DataTemplate>
-                            <dxe:HyperlinkEdit Name="PART_Editor" AllowAutoNavigate="True" Text="{Binding RowData.Row.Name}" />
-                        </DataTemplate>
-                    </dxg:GridColumn.CellTemplate>
-                </dxg:GridColumn>
-            </dxg:GridControl.Columns>
+        <dxg:GridControl ItemsSource="{Binding Items}">
+            <dxg:GridColumn FieldName="ID"/>
+            <dxg:GridColumn FieldName="HelpLink">
+                <dxg:GridColumn.CellTemplate>
+                    <DataTemplate>
+                        <dxe:HyperlinkEdit Name="PART_Editor"
+                                           AllowAutoNavigate="True"
+                                           Text="{Binding RowData.Row.Name}"/>
+                    </DataTemplate>
+                </dxg:GridColumn.CellTemplate>
+            </dxg:GridColumn>
             <dxg:GridControl.View>
-                <dxg:TableView AutoWidth="True"/>
+                <dxg:TableView AutoWidth="True"
+                               ShowGroupPanel="False"/>
             </dxg:GridControl.View>
         </dxg:GridControl>
     </Grid>
-</dx:DXWindow>
+</Window>
