@@ -1,4 +1,8 @@
 {
   "runOnWeb": false,
+<<<<<<< HEAD
+  "autoGenerateVb": false
+=======
   "autoGenerateVb": true
+>>>>>>> 11.1.4+
 }
